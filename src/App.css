@@ -1,9 +1,15 @@
+
 .App {
   text-align: center;
 }
 
+.wallpaper {
+  background-image: url('https://i.imgur.com/xza8WEf.jpg');
+  
+  margin: 0;
+}
+
 .App-header {
-  background-color: #222;
   color: white;
 }
 
@@ -15,23 +21,47 @@
 .gridBox {
   height: 10px;
   width: 10px;
-  border: solid 1px;
   margin-left: -1px;
   margin-top: -1px;
+  border: 1px solid #776839;
   display: inline-block;
   font-size: .5em;
 
 }
+.gameContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 40px;
+
+}
 
 .gridContainer {
-  margin: auto;
+  /*width 700 height 600 */
+  font-size: 0;
   width: 700px;
-  height: 600px;
+  height: 550px;
+}
+
+.playerInfo {
+  width: 175px;
   border: solid;
+  height: 325px;
+  margin-right: 40px;
+}
+
+.mainView {
+ width: 560px;
 }
 
 .player {
-  background-color: green;
+  background: repeating-linear-gradient(
+  45deg,
+  white,
+  #606dbc 3px,
+  black 3px,
+  #465298 4px
+);
 }
 
 .first {
@@ -43,9 +73,29 @@
 }
 
 .potion {
-  background: blue;
+  background: #72dbd0;
 }
 
 .enemy {
   background: red;
 }
+
+.weapon {
+  background: yellow;
+}
+
+.boss {
+  background: white;
+}
+.flash {
+  background: red;
+}
+
+.hidden {
+  background: #776839;
+}
+
+.playerInfo {
+  background: white;
+}
+
