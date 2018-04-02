@@ -13,4 +13,4 @@ To-do:
 7. Make original map more complex.
 8. Add style, sounds, icons etc.
 
-![Preview](capture.png)
+![Preview](capture.PNG)
