@@ -33,8 +33,19 @@ class GameBoard extends Component {
      for (let i = 0; i<this.props.rows; i++) {
          for (let j = 0; j<this.props.cols; j ++) {
             id = i+'-'+j;
-            playerPosition == id ? (isPlayer = true) : (isPlayer = false);
-            isPlayer ? gameGrid.push(<div key = {id} className = "gridBox player"></div>) : gameGrid.push(<div key = {id} className = 'gridBox '>{isPlayer}</div>)
+            playerPosition === id ? (isPlayer = true) : (isPlayer = false);
+            if (isPlayer) {
+              gameGrid.push(<div key = {id} className = "gridBox player"></div>);
+            } else if (this.props.grid[i][j] === 'wall') {
+              gameGrid.push(<div key = {id} className = 'gridBox wall' ></div>)
+            } else if (this.props.grid[i][j] === 'potion') {
+              gameGrid.push(<div key = {id} className = ' gridBox potion'></div>)
+            } else if (this.props.grid[i][j] === 'enemy') {
+              gameGrid.push(<div key = {id} className = ' gridBox enemy'></div>)
+            } else {
+              gameGrid.push(<div key = {id} className = 'gridBox'></div>)
+            }
+          //  isPlayer ? gameGrid.push(<div key = {id} className = "gridBox player"></div>) : gameGrid.push(<div key = {id} className = 'gridBox '>{id}</div>)
           // function for aligning rows below
           // j == 0 ? gameGrid.push(<div key = {id} className = 'gridBox first'> </div>) : gameGrid.push(<div key = {id} className = 'gridBox'> </div>)
          }

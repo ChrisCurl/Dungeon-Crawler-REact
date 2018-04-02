@@ -19,6 +19,7 @@
   margin-left: -1px;
   margin-top: -1px;
   display: inline-block;
+  font-size: .5em;
 
 }
 
@@ -34,5 +35,17 @@
 }
 
 .first {
+  background: red;
+}
+
+.wall {
+  background: black;
+}
+
+.potion {
+  background: blue;
+}
+
+.enemy {
   background: red;
 }
